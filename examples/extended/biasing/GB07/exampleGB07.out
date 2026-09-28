@@ -1,0 +1,1111 @@
+Environment variable "G4FORCE_RUN_MANAGER_TYPE" enabled with value == Serial. Forcing G4RunManager type...
+
+        ############################################
+        !!! WARNING - FPE detection is activated !!!
+        ############################################
+
+
+          ################################
+          !!! G4Backtrace is activated !!!
+          ################################
+
+
+**************************************************************
+ Geant4 version Name: geant4-11-04-patch-01    (13-March-2026)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+<<< Geant4 Physics List simulation engine: FTFP_BERT
+
+      ********************************************************* 
+      ********** processes are wrapped for biasing ************ 
+      ********************************************************* 
+ Attaching biasing operator LeadingParticleBiasingOperator to logical volume test.logical
+
+ hInelastic FTFP_BERT : threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
+
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Registered graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  RayTracer (RT)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+  TOOLSSG_OFFSCREEN (TSG_OFFSCREEN, TSG_FILE)
+  OpenGLImmediateQt (OGLIQt, OGLI)
+  OpenGLStoredQt (OGLSQt, OGLS)
+  OpenGLImmediateXm (OGLIXm, OGLIQt_FALLBACK)
+  OpenGLStoredXm (OGLSXm, OGLSQt_FALLBACK)
+  OpenGLImmediateX (OGLIX, OGLIQt_FALLBACK, OGLIXm_FALLBACK)
+  OpenGLStoredX (OGLSX, OGLSQt_FALLBACK, OGLSXm_FALLBACK)
+  RayTracerX (RTX)
+  RayTracerQt (RTQt)
+  TOOLSSG_X11_GLES (TSG_X11_GLES, TSGX11, TSG_XT_GLES_FALLBACK)
+  TOOLSSG_X11_ZB (TSG_X11_ZB, TSGX11ZB)
+  TOOLSSG_XT_GLES (TSG_XT_GLES, TSGXt, TSG_QT_GLES_FALLBACK)
+  TOOLSSG_XT_ZB (TSG_XT_ZB, TSGXtZB)
+  TOOLSSG_QT_GLES (TSG_QT_GLES, TSGQt, TSG, OGL)
+  TOOLSSG_QT_ZB (TSG_QT_ZB, TSGQtZB, TSGZB)
+You may choose a graphics system (driver) with a parameter of
+the command "/vis/open" or "/vis/sceneHandler/create",
+or you may omit the driver parameter and choose at run time:
+- by argument in the construction of G4VisExecutive
+- by environment variable "G4VIS_DEFAULT_DRIVER"
+- by entry in "~/.g4session"
+- by build flags.
+- Note: This feature is not allowed in batch mode.
+For further information see "examples/basic/B1/exampleB1.cc"
+and "vis.mac".
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered models:
+  None
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+Registered filters:
+  None
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+=======================================================================
+======                 Electromagnetic Physics Parameters      ========
+=======================================================================
+LPM effect enabled                                 1
+Enable creation and use of sampling tables         0
+Apply cuts on all EM processes                     0
+Use combined TransportationWithMsc                 Disabled
+Use general process                                1
+Enable linear polarisation for gamma               0
+Enable photoeffect sampling below K-shell          1
+Enable sampling of quantum entanglement            0
+X-section factor for integral approach             0.8
+Min kinetic energy for tables                      100 eV 
+Max kinetic energy for tables                      100 TeV
+Number of bins per decade of a table               7
+Verbose level                                      1
+Verbose level for worker thread                    0
+Bremsstrahlung energy threshold above which 
+  primary e+- is added to the list of secondary    100 TeV
+Bremsstrahlung energy threshold above which primary
+  muon/hadron is added to the list of secondary    100 TeV
+Positron annihilation at rest model                SimplePositronium
+Enable 3 gamma annihilation on fly                 0
+Lowest triplet kinetic energy                      1 MeV
+Enable sampling of gamma linear polarisation       0
+5D gamma conversion model type                     0
+5D gamma conversion model on isolated ion          0
+Use RiGe 5D e+e- pair production model by muons    0
+Livermore data directory                           epics_2017
+=======================================================================
+======                 Ionisation Parameters                   ========
+=======================================================================
+Step function for e+-                              (0.2, 1 mm)
+Step function for muons/hadrons                    (0.2, 0.1 mm)
+Step function for light ions                       (0.2, 0.1 mm)
+Step function for general ions                     (0.2, 0.1 mm)
+Lowest e+e- kinetic energy                         1 keV
+Lowest muon/hadron kinetic energy                  1 keV
+Use ICRU90 data                                    0
+Fluctuations of dE/dx are enabled                  1
+Type of fluctuation model for leptons and hadrons  Urban
+Use built-in Birks saturation                      0
+Build CSDA range enabled                           0
+Use cut as a final range enabled                   0
+Enable angular generator interface                 0
+Max kinetic energy for CSDA tables                 1 GeV
+Max kinetic energy for NIEL computation            0 eV 
+Linear loss limit                                  0.01
+Read data from file for e+e- pair production by mu 0
+=======================================================================
+======                 Multiple Scattering Parameters          ========
+=======================================================================
+Type of msc step limit algorithm for e+-           1
+Type of msc step limit algorithm for muons/hadrons 0
+Msc lateral displacement for e+- enabled           1
+Msc lateral displacement for muons and hadrons     0
+Urban msc model lateral displacement alg96         1
+Range factor for msc step limit for e+-            0.04
+Range factor for msc step limit for muons/hadrons  0.2
+Geometry factor for msc step limitation of e+-     2.5
+Safety factor for msc step limit for e+-           0.6
+Skin parameter for msc step limitation of e+-      1
+Lambda limit for msc step limit for e+-            1 mm
+Use Mott correction for e- scattering              0
+Factor used for dynamic computation of angular 
+  limit between single and multiple scattering     1
+Fixed angular limit between single 
+  and multiple scattering                          3.1416 rad
+Upper energy limit for e+- multiple scattering     100 MeV
+Type of electron single scattering model           0
+Type of nuclear form-factor                        1
+Screening factor                                   1
+=======================================================================
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina : Emin=    0 eV  Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 150 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 150 keV to 100 TeV in 62 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e-  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e- XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+annihil:  for e+ XStype:2 SubType=5 AtRestModel:Simple BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001, from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for GenericIon  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+msc:  for alpha  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for alpha  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
+
+msc:  for anti_proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for anti_proton  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for anti_proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for anti_proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001, from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for anti_proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001, from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001, from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001, from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV
+        MuBetheBloch : Emin=  200 keV Emax=  100 TeV
+
+muBrems:  for mu-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001, from 0.85 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi+  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001, from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi-  XStype:3  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 3, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001, from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180, pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+-----------------------------------------------------------------------
+                           Hadronic Processes for neutron
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronElasticXS: 0 eV  ---> 100 TeV
+  Process: neutronInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
+  Process: nCapture
+        Model:               nRadCapture: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+  Process: nKiller
+-----------------------------------------------------------------------
+                           Hadronic Processes for B-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: B-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for D-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: D-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for GenericIon
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_He3
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_alpha
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-------------------------------------------------------------------------
+                           Hadronic Processes for anti_hypertriton
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: anti_lambdaInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_neutron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_proton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for anti_triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+  Process: hFritiofCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for deuteron
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e+
+  Process: positronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for e-
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for gamma
+  Process: photonNuclear
+        Model:               GammaNPreco: 0 eV  ---> 200 MeV
+        Model:            BertiniCascade: 199 MeV ---> 6 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            GammaNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for kaon-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: kaon-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for lambda
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: lambdaInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for mu-
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+  Process: muMinusCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for pi-
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: pi-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for proton
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+  Process: protonInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+-----------------------------------------------------------------------
+                           Hadronic Processes for sigma-
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: sigma-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+  Process: hBertiniCaptureAtRest
+-----------------------------------------------------------------------
+                           Hadronic Processes for triton
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+=======================================================================
+======       Geant4 Native Pre-compound Model Parameters       ========
+=======================================================================
+Type of pre-compound model                          0
+Type of pre-compound inverse x-section              1
+Pre-compound model active                           1
+Pre-compound excitation low energy                  0.1 MeV 
+Pre-compound excitation high energy                 15 MeV 
+Angular generator for pre-compound model            1
+Use NeverGoBack option for pre-compound model       0
+Use SoftCutOff option for pre-compound model        0
+Use CEM transitions for pre-compound model          1
+Use GNASH transitions for pre-compound model        0
+Use HETC submodel for pre-compound model            0
+=======================================================================
+======       Nuclear De-excitation Module Parameters           ========
+=======================================================================
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Type of Fermi BreakUp model                         ModelVI
+Min excitation energy                               0.01 keV 
+Min energy per nucleon for multifragmentation       2e+05 MeV
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      0
+Time limit for long lived isomeres                  1 ns 
+Isomer production flag                              1
+Internal e- conversion flag                         1
+Store e- internal conversion data                   1
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+=======================================================================
+       neutron, kinetic energy (MeV) =      900.501, position (cm) = (-33.6602,-28.201,200),	 weight = 2
+    anti_nu_mu, kinetic energy (MeV) =      35.7369, position (cm) = (-60.802,-12.4978,200),	 weight = 5
+         gamma, kinetic energy (MeV) =     0.603737, position (cm) = (-80.6557,-24.1246,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.14422, position (cm) = (25.8336,-56.2859,200),	 weight = 6
+       neutron, kinetic energy (MeV) =     0.856209, position (cm) = (42.02,-29.9285,200),	 weight = 2
+         gamma, kinetic energy (MeV) =      4.08465, position (cm) = (37.6377,-33.0583,200),	 weight = 4
+         gamma, kinetic energy (MeV) =      4.45791, position (cm) = (37.999,-32.6125,200),	 weight = 2
+       neutron, kinetic energy (MeV) =       144.38, position (cm) = (13.2143,-29.8254,200),	 weight = 2
+         gamma, kinetic energy (MeV) =      4.62529, position (cm) = (46.039,12.6285,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      7.06864, position (cm) = (51.5564,7.28897,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      3.52151, position (cm) = (43.748,5.69225,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.26235, position (cm) = (31.7509,3.2821,200),	 weight = 3
+         gamma, kinetic energy (MeV) =     0.591503, position (cm) = (-52.3578,35.2513,200),	 weight = 1
+           pi-, kinetic energy (MeV) =      178.399, position (cm) = (-47.4721,3.35331,200),	 weight = 3
+       neutron, kinetic energy (MeV) =      155.437, position (cm) = (-0.794079,-12.7625,200),	 weight = 3
+         gamma, kinetic energy (MeV) =     0.510999, position (cm) = (1.9877,-19.092,200),	 weight = 6
+         gamma, kinetic energy (MeV) =     0.411056, position (cm) = (2.14614,-17.4901,200),	 weight = 6
+            e-, kinetic energy (MeV) =      4.98771, position (cm) = (1.96191,-17.9,200),	 weight = 6
+            e-, kinetic energy (MeV) =      19.0778, position (cm) = (0.739991,-18.2586,200),	 weight = 6
+         gamma, kinetic energy (MeV) =    0.0951331, position (cm) = (0.716822,-18.2246,200),	 weight = 6
+         gamma, kinetic energy (MeV) =      7.02578, position (cm) = (0.739638,-18.2319,200),	 weight = 6
+       neutron, kinetic energy (MeV) =       305.98, position (cm) = (-13.7944,-6.35335,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      6.02806, position (cm) = (-5.34133,0.171518,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.306277, position (cm) = (-9.03597,10.3322,200),	 weight = 1
+            e+, kinetic energy (MeV) =       53.974, position (cm) = (-7.39465,-1.36957,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0907433, position (cm) = (-7.39146,-1.37019,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.272803, position (cm) = (-7.48318,-1.1838,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.41014, position (cm) = (-7.8027,-1.29556,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.551502, position (cm) = (-7.66634,-1.20804,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.13928, position (cm) = (-7.89691,-1.18749,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.629648, position (cm) = (-7.90409,-1.1386,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      18.7963, position (cm) = (-7.86589,-0.762973,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      11.1688, position (cm) = (-7.85007,-0.780573,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.898479, position (cm) = (-7.90282,-1.12018,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.143798, position (cm) = (-13.631,-3.91073,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.403215, position (cm) = (-7.6569,-0.416236,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.108028, position (cm) = (-8.00715,-0.0902491,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.126286, position (cm) = (-3.68437,-2.40752,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      17.0523, position (cm) = (-6.69609,-1.32412,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.248376, position (cm) = (-4.92514,-1.39821,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      9.95285, position (cm) = (-6.34795,-1.43284,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0982374, position (cm) = (-7.97313,-1.84865,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.55446, position (cm) = (-8.16095,-1.56432,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0631613, position (cm) = (-10.6042,13.9023,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      3.16838, position (cm) = (-8.39541,-3.21806,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.816838, position (cm) = (-7.63351,-0.608183,200),	 weight = 1
+            e-, kinetic energy (MeV) =      9.60866, position (cm) = (-7.62109,-0.428836,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      123.985, position (cm) = (-5.78685,-2.77732,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      11.0826, position (cm) = (-6.485,-2.35998,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.45315, position (cm) = (-10.0782,-1.66489,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.142393, position (cm) = (-5.65503,-11.4509,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.842484, position (cm) = (-16.1734,-10.0367,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      32.0311, position (cm) = (-11.8698,-22.2493,200),	 weight = 3
+         gamma, kinetic energy (MeV) =      4.25428, position (cm) = (-3.02701,-7.37298,200),	 weight = 3
+            e-, kinetic energy (MeV) =      6.91576, position (cm) = (-2.91537,-7.48372,200),	 weight = 3
+       neutron, kinetic energy (MeV) =      76.8072, position (cm) = (42.5924,-1.69602,200),	 weight = 1
+       neutron, kinetic energy (MeV) =     0.990361, position (cm) = (-19.6535,56.939,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.139818, position (cm) = (16.2304,49.5703,200),	 weight = 1
+       neutron, kinetic energy (MeV) =     0.834255, position (cm) = (17.2643,55.1041,200),	 weight = 2
+          nu_e, kinetic energy (MeV) =      37.7615, position (cm) = (-11.5275,6.90812,200),	 weight = 4
+         nu_mu, kinetic energy (MeV) =      29.7919, position (cm) = (81.7423,-5.27951,200),	 weight = 4
+       neutron, kinetic energy (MeV) =  5.89379e-05, position (cm) = (23.3662,66.9499,200),	 weight = 9
+         gamma, kinetic energy (MeV) =     0.714568, position (cm) = (-22.8022,2.7794,200),	 weight = 3
+         gamma, kinetic energy (MeV) =      1.46841, position (cm) = (-56.8684,-19.6168,200),	 weight = 4
+         gamma, kinetic energy (MeV) =     0.143979, position (cm) = (45.6701,-6.32251,200),	 weight = 2
+    anti_nu_mu, kinetic energy (MeV) =      34.4295, position (cm) = (22.7117,-12.9979,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.40665, position (cm) = (-17.7271,18.3992,200),	 weight = 4
+    anti_nu_mu, kinetic energy (MeV) =      41.4776, position (cm) = (7.17601,-19.3829,200),	 weight = 1
+         nu_mu, kinetic energy (MeV) =      29.7919, position (cm) = (-91.8376,-17.4615,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.03507, position (cm) = (22.4939,2.61579,200),	 weight = 2
+       neutron, kinetic energy (MeV) =  9.24226e-05, position (cm) = (38.8323,10.3555,200),	 weight = 1
+        proton, kinetic energy (MeV) =      108.713, position (cm) = (23.4601,3.96811,200),	 weight = 2
+       neutron, kinetic energy (MeV) =      139.874, position (cm) = (26.0001,1.73458,200),	 weight = 1
+       neutron, kinetic energy (MeV) =      224.772, position (cm) = (-71.404,25.7878,200),	 weight = 8
+       neutron, kinetic energy (MeV) =      917.388, position (cm) = (-72.0827,25.7757,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.18932, position (cm) = (19.1619,1.23937,200),	 weight = 1
+       neutron, kinetic energy (MeV) =      67.2782, position (cm) = (-38.3356,-50.497,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      761.003, position (cm) = (14.8649,7.45795,200),	 weight = 2
+       neutron, kinetic energy (MeV) =  2.78285e-05, position (cm) = (19.1873,13.462,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.46166, position (cm) = (25.9133,-91.7696,200),	 weight = 3
+         gamma, kinetic energy (MeV) =      20.6412, position (cm) = (44.7662,-77.2627,200),	 weight = 3
+       neutron, kinetic energy (MeV) =      118.387, position (cm) = (5.87206,10.6853,200),	 weight = 2
+           pi-, kinetic energy (MeV) =      177.985, position (cm) = (14.6102,-17.5426,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      8.47185, position (cm) = (-74.8996,-12.4271,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.63097, position (cm) = (-86.1068,-16.8653,200),	 weight = 1
+    anti_nu_mu, kinetic energy (MeV) =      43.0234, position (cm) = (24.3423,-11.0588,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.301371, position (cm) = (31.2891,-0.0420126,200),	 weight = 3
+         gamma, kinetic energy (MeV) =       1.4055, position (cm) = (33.6279,2.35275,200),	 weight = 4
+    anti_nu_mu, kinetic energy (MeV) =      50.4364, position (cm) = (-70.4383,-20.4553,200),	 weight = 1
+         nu_mu, kinetic energy (MeV) =      29.7919, position (cm) = (-43.9738,-84.7889,200),	 weight = 4
+       neutron, kinetic energy (MeV) =      63.0435, position (cm) = (64.4728,31.4872,200),	 weight = 1
+    anti_nu_mu, kinetic energy (MeV) =      22.8418, position (cm) = (24.1008,-17.0268,200),	 weight = 10
+         gamma, kinetic energy (MeV) =     0.195417, position (cm) = (1.09912,-65.3159,200),	 weight = 6
+         gamma, kinetic energy (MeV) =      1.15754, position (cm) = (-2.37667,-74.3303,200),	 weight = 6
+         gamma, kinetic energy (MeV) =      3.52236, position (cm) = (-3.00395,-78.2908,200),	 weight = 6
+       neutron, kinetic energy (MeV) =      45.4668, position (cm) = (-49.893,32.1446,200),	 weight = 2
+        proton, kinetic energy (MeV) =      323.558, position (cm) = (-44.6764,40.416,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      8.24677, position (cm) = (8.53895,86.9025,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      197.607, position (cm) = (-33.013,-4.56583,200),	 weight = 2
+         gamma, kinetic energy (MeV) =      6.05194, position (cm) = (-12.4625,56.4865,200),	 weight = 3
+       neutron, kinetic energy (MeV) =      100.869, position (cm) = (8.98071,27.55,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.20843, position (cm) = (-4.63741,-9.44359,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      31.8067, position (cm) = (6.33898,-46.9343,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.486634, position (cm) = (18.2898,40.1675,200),	 weight = 5
+       neutron, kinetic energy (MeV) =      1.50762, position (cm) = (-7.72452,16.9545,200),	 weight = 5
+         gamma, kinetic energy (MeV) =      7.14517, position (cm) = (-2.40243,14.0679,200),	 weight = 5
+         gamma, kinetic energy (MeV) =      9.65336, position (cm) = (0.00249565,5.27631,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.22105, position (cm) = (2.31566,6.62958,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.04583, position (cm) = (-2.26339,8.1454,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      23.3846, position (cm) = (19.3071,18.9799,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.147547, position (cm) = (10.1647,-6.18794,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.144921, position (cm) = (6.03609,-7.27687,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.46658, position (cm) = (-8.90504,13.1675,200),	 weight = 1
+         gamma, kinetic energy (MeV) =       12.082, position (cm) = (3.19108,7.26675,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.866606, position (cm) = (-3.14495,14.7838,200),	 weight = 1
+         gamma, kinetic energy (MeV) =       57.942, position (cm) = (2.93775,0.392725,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.627213, position (cm) = (14.3115,12.6418,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.26403, position (cm) = (-1.82256,-1.50564,200),	 weight = 1
+         gamma, kinetic energy (MeV) =       1.9901, position (cm) = (10.7258,-10.2045,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      6.81384, position (cm) = (-0.107481,0.516845,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0817252, position (cm) = (18.1805,9.03663,200),	 weight = 1
+         gamma, kinetic energy (MeV) =       3.2739, position (cm) = (4.78137,2.8735,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.11742, position (cm) = (1.22541,-4.77051,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.73747, position (cm) = (1.89781,7.19345,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.636799, position (cm) = (0.392586,6.78943,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.626697, position (cm) = (5.07748,-5.655,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.192466, position (cm) = (4.06963,13.5168,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      6.57333, position (cm) = (-0.801676,2.52873,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.81644, position (cm) = (0.501065,0.538964,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.731891, position (cm) = (1.17559,-8.00079,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      5.24673, position (cm) = (-12.514,4.2821,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      46.6126, position (cm) = (3.47253,2.72789,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.915083, position (cm) = (-1.80071,3.20989,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      3.68816, position (cm) = (-2.74126,4.241,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.537968, position (cm) = (1.49154,-3.97376,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      8.26623, position (cm) = (10.7678,5.55806,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.294346, position (cm) = (5.95445,-6.72523,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.99439, position (cm) = (2.12945,-4.45338,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0597555, position (cm) = (36.0544,-17.3462,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      9.86499, position (cm) = (16.3547,14.0163,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0655883, position (cm) = (-8.76032,11.7088,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.776411, position (cm) = (15.7708,39.1903,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      15.8959, position (cm) = (-31.0477,22.0858,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.41708, position (cm) = (-25.2104,18.2609,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.510999, position (cm) = (-13.4369,8.58473,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.294468, position (cm) = (-7.93679,9.01281,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.400562, position (cm) = (24.0073,-15.0699,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      7.67632, position (cm) = (17.9753,-4.63047,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      30.9761, position (cm) = (27.6605,-13.0685,200),	 weight = 1
+         gamma, kinetic energy (MeV) =        2.574, position (cm) = (5.83834,-0.32831,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.43479, position (cm) = (-2.98284,2.86314,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0802194, position (cm) = (-9.81857,8.89594,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      16.2618, position (cm) = (-7.57314,7.80356,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      5.51758, position (cm) = (-8.30034,7.82607,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.495233, position (cm) = (-2.62601,3.36202,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.22111, position (cm) = (-8.53963,-0.592945,200),	 weight = 3
+         gamma, kinetic energy (MeV) =    0.0963769, position (cm) = (35.9768,6.7629,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.510999, position (cm) = (23.07,16.4999,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.102254, position (cm) = (27.2774,9.38348,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      14.1687, position (cm) = (-14.2805,-17.709,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.462058, position (cm) = (35.2808,24.297,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.42525, position (cm) = (-28.9377,-22.414,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.61692, position (cm) = (0.100456,10.6056,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      8.42842, position (cm) = (9.16431,-12.7592,200),	 weight = 1
+            e+, kinetic energy (MeV) =      8.17483, position (cm) = (1.05846,0.901516,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0711512, position (cm) = (1.36367,0.956315,200),	 weight = 1
+            e-, kinetic energy (MeV) =      25.4966, position (cm) = (1.78425,1.16538,200),	 weight = 1
+            e-, kinetic energy (MeV) =      2.02731, position (cm) = (1.75323,1.22034,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.32276, position (cm) = (1.76273,1.16371,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      11.5446, position (cm) = (1.73569,1.12604,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      55.4907, position (cm) = (-1.01375,1.09311,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.88744, position (cm) = (0.0965774,-6.20658,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.738092, position (cm) = (-1.39867,-4.54406,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.313685, position (cm) = (-1.90632,-4.22108,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0634245, position (cm) = (-1.78269,-4.64765,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      11.7912, position (cm) = (-0.71349,4.93318,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.06732, position (cm) = (-7.05311,-19.8444,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.52011, position (cm) = (-8.43307,-2.54454,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.18751, position (cm) = (-2.53403,-4.5195,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.36843, position (cm) = (-11.3289,4.18431,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.20976, position (cm) = (0.400133,-0.627777,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.509615, position (cm) = (-6.60312,-11.9668,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      3.21828, position (cm) = (1.48017,-5.81717,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.100998, position (cm) = (-1.68846,-7.03739,200),	 weight = 1
+         gamma, kinetic energy (MeV) =       3.4757, position (cm) = (-6.41052,16.316,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.26642, position (cm) = (16.1111,-2.50159,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.32673, position (cm) = (5.13959,3.87103,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      21.6344, position (cm) = (2.43658,-5.18358,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.109939, position (cm) = (-3.47286,0.958517,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.21998, position (cm) = (-0.340203,-2.48868,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      7.86651, position (cm) = (0.029266,-0.0341349,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0984512, position (cm) = (6.23108,2.11811,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.86174, position (cm) = (4.81653,0.0252711,200),	 weight = 1
+            e-, kinetic energy (MeV) =       4.9283, position (cm) = (-2.00414,-2.21349,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0213541, position (cm) = (-1.98823,-2.21225,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0822853, position (cm) = (-2.23256,-2.22245,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.132153, position (cm) = (-2.59589,-2.15804,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.40969, position (cm) = (-0.819586,-1.34208,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0797124, position (cm) = (17.1361,4.71215,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.387256, position (cm) = (-7.1584,-0.0189413,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.32328, position (cm) = (0.0539095,-1.27519,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.880549, position (cm) = (-0.572242,-1.58677,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.68345, position (cm) = (0.513816,-2.17498,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.26894, position (cm) = (1.09795,-2.32387,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.21481, position (cm) = (-9.74344,-5.49292,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.97651, position (cm) = (-1.19624,-1.0032,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      45.2793, position (cm) = (-0.951988,-1.5271,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      12.0354, position (cm) = (-1.67399,-5.27125,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.116018, position (cm) = (-8.1382,-5.91143,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.102805, position (cm) = (-7.11368,-1.45383,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.66575, position (cm) = (-3.58018,-2.51652,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      6.87787, position (cm) = (-1.43651,-4.1439,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      15.4987, position (cm) = (6.05772,-1.21903,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      6.28378, position (cm) = (6.08753,-6.15354,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.11256, position (cm) = (-29.7337,2.52163,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.50141, position (cm) = (5.75356,-0.418007,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      16.2492, position (cm) = (-0.353161,-1.20022,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      14.5954, position (cm) = (-15.8065,14.5316,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.56166, position (cm) = (1.4682,4.10293,200),	 weight = 1
+         gamma, kinetic energy (MeV) =       348.87, position (cm) = (0.126917,1.99078,200),	 weight = 1
+         gamma, kinetic energy (MeV) =       2.9456, position (cm) = (4.90924,31.0637,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.10539, position (cm) = (12.4602,-2.56159,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.80153, position (cm) = (4.48903,1.2354,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.487964, position (cm) = (-4.62035,1.38352,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.19159, position (cm) = (-3.11015,-4.09712,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      28.8595, position (cm) = (5.28526,1.41353,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      9.29484, position (cm) = (-3.16654,-0.65452,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.44346, position (cm) = (3.29784,3.16985,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.63252, position (cm) = (10.795,11.9265,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0886181, position (cm) = (-2.02224,-0.155576,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.72497, position (cm) = (-0.8866,0.263782,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.445629, position (cm) = (-0.915861,2.09585,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.487073, position (cm) = (-52.66,-29.3141,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.249037, position (cm) = (-0.493724,-0.66954,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      5.33615, position (cm) = (27.0793,-4.46736,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0872009, position (cm) = (10.8027,-2.39664,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.07771, position (cm) = (3.51188,-5.01557,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      3.97441, position (cm) = (2.64083,-2.11487,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      17.6198, position (cm) = (-3.17537,-11.0613,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.501987, position (cm) = (6.55334,2.35155,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      5.86226, position (cm) = (0.341614,1.38986,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      13.1999, position (cm) = (1.0651,-0.48497,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.372829, position (cm) = (10.0964,-4.75179,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      7.98595, position (cm) = (20.9865,-11.5864,200),	 weight = 1
+            e+, kinetic energy (MeV) =      22.0621, position (cm) = (-0.386999,2.32365,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.12625, position (cm) = (-0.382103,2.34417,200),	 weight = 1
+            e+, kinetic energy (MeV) =      15.7695, position (cm) = (-29.467,-26.0855,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.459782, position (cm) = (-29.4766,-26.0829,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.833747, position (cm) = (-29.1164,-25.5232,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.258502, position (cm) = (0.244953,10.0927,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.13148, position (cm) = (-10.4186,-19.6204,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      130.709, position (cm) = (1.27931,-3.00501,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      18.4235, position (cm) = (-0.645653,-10.7392,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      19.7862, position (cm) = (5.29434,-8.68509,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.472205, position (cm) = (-1.83073,5.09591,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.35874, position (cm) = (0.12973,-7.84936,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      9.14555, position (cm) = (-27.4679,4.02485,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.152395, position (cm) = (10.5123,2.29727,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.91889, position (cm) = (-10.8486,3.12872,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.25518, position (cm) = (16.2518,-17.8514,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.370285, position (cm) = (-13.3173,4.26734,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.510999, position (cm) = (1.45884,-0.588001,200),	 weight = 1
+            e-, kinetic energy (MeV) =      12.8914, position (cm) = (0.372001,0.268598,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      0.42161, position (cm) = (0.37951,0.258804,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      15.9081, position (cm) = (0.161606,0.446999,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      3.00745, position (cm) = (-3.33463,-9.82895,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.30054, position (cm) = (2.49355,10.9946,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.202469, position (cm) = (9.54121,-9.43297,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      40.2287, position (cm) = (3.07501,1.38579,200),	 weight = 1
+            e+, kinetic energy (MeV) =      13.6492, position (cm) = (-16.1406,-6.36111,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.71464, position (cm) = (-16.1426,-6.35257,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.08192, position (cm) = (-15.6302,-5.2102,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.43845, position (cm) = (-15.9251,-5.3538,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      8.01501, position (cm) = (11.661,32.7954,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.152697, position (cm) = (-12.0133,3.40729,200),	 weight = 1
+         gamma, kinetic energy (MeV) =    0.0836665, position (cm) = (-1.63256,-6.24138,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      84.5196, position (cm) = (4.28361,-1.42865,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      7.45523, position (cm) = (0.861089,-2.587,200),	 weight = 3
+         gamma, kinetic energy (MeV) =      10.0614, position (cm) = (0.116548,0.203497,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      2.33847, position (cm) = (2.62469,-2.16249,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      7.78591, position (cm) = (4.43644,-8.38718,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      9.66461, position (cm) = (-3.66813,8.30398,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.428054, position (cm) = (4.83485,-13.2002,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      14.9966, position (cm) = (8.33743,4.50414,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.472192, position (cm) = (-18.9769,-2.06838,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      11.3754, position (cm) = (10.7074,-5.2757,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      1.77841, position (cm) = (18.1834,-12.025,200),	 weight = 1
+            e+, kinetic energy (MeV) =      116.036, position (cm) = (0.441748,3.57364,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.310953, position (cm) = (0.440936,3.56937,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      11.8768, position (cm) = (0.451267,3.54802,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.808947, position (cm) = (0.532456,3.50971,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      10.7855, position (cm) = (-2.25696,7.36101,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.182716, position (cm) = (-3.13709,15.9737,200),	 weight = 1
+         gamma, kinetic energy (MeV) =      4.93889, position (cm) = (6.05106,-3.6535,200),	 weight = 1
+         gamma, kinetic energy (MeV) =       0.5406, position (cm) = (-47.1015,-29.7631,200),	 weight = 1
+         gamma, kinetic energy (MeV) =     0.128581, position (cm) = (7.91519,-19.4781,200),	 weight = 1
+Graphics systems deleted.
+Visualization Manager deleting...

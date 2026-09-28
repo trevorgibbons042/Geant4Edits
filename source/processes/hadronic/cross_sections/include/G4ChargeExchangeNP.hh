@@ -1,0 +1,77 @@
+// ********************************************************************
+// * License and Disclaimer                                           *
+// *                                                                  *
+// * The  Geant4 software  is  copyright of the Copyright Holders  of *
+// * the Geant4 Collaboration.  It is provided  under  the terms  and *
+// * conditions of the Geant4 Software License,  included in the file *
+// * LICENSE and available at  http://cern.ch/geant4/license .  These *
+// * include a list of copyright holders.                             *
+// *                                                                  *
+// * Neither the authors of this software system, nor their employing *
+// * institutes,nor the agencies providing financial support for this *
+// * work  make  any representation or  warranty, express or implied, *
+// * regarding  this  software system or assume any liability for its *
+// * use.  Please see the license in the file  LICENSE  and URL above *
+// * for the full disclaimer and the limitation of liability.         *
+// *                                                                  *
+// * This  code  implementation is the result of  the  scientific and *
+// * technical work of the GEANT4 collaboration.                      *
+// * By using,  copying,  modifying or  distributing the software (or *
+// * any work based  on the software)  you  agree  to acknowledge its *
+// * use  in  resulting  scientific  publications,  and indicate your *
+// * acceptance of all terms of the Geant4 Software license.          *
+// ********************************************************************
+//
+//
+// -------------------------------------------------------------------
+//
+// GEANT4 Class header file G4ChargeExchangeXS
+//
+// Author: Trevor Gibbons 
+ 
+// This is a class for charge exchange process on neutrons
+// N0 + (N, Z, A) -> P + (N+1, Z-1, A)
+
+#ifndef G4ChargeExchangeNP_h
+#define G4ChargeExchangeNP_h 
+
+#include "G4VCrossSectionDataSet.hh"
+#include "globals.hh"
+#include <vector>
+
+class G4DynamicParticle;
+class G4ParticleDefinition;
+class G4Isotope;
+class G4Element;
+class G4Material;
+class G4Pow;
+#include "G4SystemOfUnits.hh"
+
+class G4ChargeExchangeNP final : public G4VCrossSectionDataSet{
+public:
+    G4ChargeExchangeNP();
+    ~G4ChargeExchangeNP() override = default;
+
+    //Input Public Functions
+    void SetCrossSectionFactor(G4double val) {fFactor = val; G4cout << "Printing factor:" << fFactor;};
+    G4double GetElementCrossSection(const G4DynamicParticle*, G4int Z, const G4Material*) final;
+    G4double GetCrossSectionFactor() const { return fFactor; };
+    const G4ParticleDefinition* SampleSecondaryType(const G4ParticleDefinition* part, const G4Material* mat, G4int Z, G4int A, G4double etot);
+    G4bool IsElementApplicable(const G4DynamicParticle* particle, G4int Z, const G4Material*) final;
+    G4bool IsIsoApplicable(const G4DynamicParticle* particle, G4int Z, G4int A, const G4Element*, const G4Material*) final;
+    
+
+    private:
+    //Output Private Functions
+    G4double GetCrossSection(const G4ParticleDefinition*, const G4Material*, G4int Z, G4double etot);
+    G4double SampleNeutron(const G4double etot, const G4double ltmax) const;
+
+    //Variables
+    const G4ParticleDefinition* particleNeutron;
+    const G4ParticleDefinition* particleProton;
+    G4double fFactor{1}, fEnergyLimit{10.0 * CLHEP::GeV};
+    G4double SpecificSection = 0.0;
+    G4Pow* g4calc;
+};
+
+#endif
