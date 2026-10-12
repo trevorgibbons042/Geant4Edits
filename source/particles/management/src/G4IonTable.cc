@@ -627,7 +627,8 @@ G4ParticleDefinition* G4IonTable::FindIon(G4int Z, G4int A, G4double E,
     // -- loop over all particles in Ion table
     G4int encoding = GetNucleusEncoding(Z, A);
     const G4ParticleDefinition* ion1 = nullptr;
-    for (auto i = fIonList->find(encoding); i != fIonList->cend(); ++i) {
+    for (auto i = fIonList->lower_bound(encoding);
+         i != fIonList->cend() && i->first == encoding; ++i) {
       ion = i->second;
       if ((ion->GetAtomicNumber() != Z) || (ion->GetAtomicMass() != A)) break;
       // excitation level
@@ -690,7 +691,8 @@ G4ParticleDefinition* G4IonTable::FindIon(G4int Z, G4int A, G4int LL, G4double E
 
   // -- loop over all particles in Ion table
   G4int encoding = GetNucleusEncoding(Z, A, LL, 0.0, 0);
-  for (auto i = fIonList->find(encoding); i != fIonList->cend(); ++i) {
+  for (auto i = fIonList->lower_bound(encoding);
+       i != fIonList->cend() && i->first == encoding; ++i) {
     ion = i->second;
     if ((ion->GetAtomicNumber() != Z) || (ion->GetAtomicMass() != A)) break;
     if (ion->GetQuarkContent(3) != LL) break;
@@ -1029,7 +1031,8 @@ G4double G4IonTable::GetNucleusMass(G4int Z, G4int A, G4int LL, G4int lvl) const
       // -- loop over all particles in Ion table
       G4int encoding = GetNucleusEncoding(Z, A);
       G4bool isFound = false;
-      for (auto i = fIonList->find(encoding); i != fIonList->cend(); ++i) {
+      for (auto i = fIonList->lower_bound(encoding);
+           i != fIonList->cend() && i->first == encoding; ++i) {
         ion = i->second;
         if ((ion->GetAtomicNumber() != Z) || (ion->GetAtomicMass() != A)) break;
         // Excitation level
@@ -1106,7 +1109,8 @@ void G4IonTable::InsertWorker(const G4ParticleDefinition* particle)
   G4int encoding = GetNucleusEncoding(Z, A, LL);
   G4bool found = false;
   if (encoding != 0) {
-    for (auto i = fIonList->find(encoding); i != fIonList->cend(); ++i) {
+    for (auto i = fIonList->lower_bound(encoding);
+         i != fIonList->cend() && i->first == encoding; ++i) {
       if (particle == i->second) {
         found = true;
         break;
@@ -1155,7 +1159,8 @@ void G4IonTable::Remove(const G4ParticleDefinition* particle)
     G4int LL = particle->GetQuarkContent(3);  // strangeness
     G4int encoding = GetNucleusEncoding(Z, A, LL);
     if (encoding != 0) {
-      for (auto i = fIonListShadow->find(encoding); i != fIonListShadow->cend(); ++i) {
+      for (auto i = fIonListShadow->lower_bound(encoding);
+           i != fIonListShadow->cend() && i->first == encoding; ++i) {
         if (particle == i->second) {
           fIonListShadow->erase(i);
           break;
@@ -1387,7 +1392,8 @@ G4bool G4IonTable::Contains(const G4ParticleDefinition* particle) const
   G4int encoding = GetNucleusEncoding(Z, A, LL);
   G4bool found = false;
   if (encoding != 0) {
-    for (auto i = fIonListShadow->find(encoding); i != fIonListShadow->cend(); ++i) {
+    for (auto i = fIonListShadow->lower_bound(encoding);
+         i != fIonListShadow->cend() && i->first == encoding; ++i) {
       if (particle == i->second) {
         found = true;
         break;
@@ -1417,7 +1423,8 @@ G4ParticleDefinition* G4IonTable::FindIonInMaster(G4int Z, G4int A, G4double E,
 
   // -- loop over all particles in Ion table
   G4int encoding = GetNucleusEncoding(Z, A);
-  for (auto i = fIonListShadow->find(encoding); i != fIonListShadow->cend(); ++i) {
+  for (auto i = fIonListShadow->lower_bound(encoding);
+       i != fIonListShadow->cend() && i->first == encoding; ++i) {
     ion = i->second;
     if ((ion->GetAtomicNumber() != Z) || (ion->GetAtomicMass() != A)) break;
     // excitation level
@@ -1449,7 +1456,8 @@ G4ParticleDefinition* G4IonTable::FindIonInMaster(G4int Z, G4int A, G4int LL, G4
 
   // -- loop over all particles in Ion table
   G4int encoding = GetNucleusEncoding(Z, A, LL, 0.0, 0);
-  for (auto i = fIonListShadow->find(encoding); i != fIonListShadow->cend(); ++i) {
+  for (auto i = fIonListShadow->lower_bound(encoding);
+       i != fIonListShadow->cend() && i->first == encoding; ++i) {
     ion = i->second;
     if ((ion->GetAtomicNumber() != Z) || (ion->GetAtomicMass() != A)) break;
     if (ion->GetQuarkContent(3) != LL) break;
@@ -1479,7 +1487,8 @@ G4ParticleDefinition* G4IonTable::FindIonInMaster(G4int Z, G4int A, G4int lvl)
 
   // -- loop over all particles in Ion table
   G4int encoding = GetNucleusEncoding(Z, A);
-  for (auto i = fIonListShadow->find(encoding); i != fIonListShadow->cend(); ++i) {
+  for (auto i = fIonListShadow->lower_bound(encoding);
+       i != fIonListShadow->cend() && i->first == encoding; ++i) {
     ion = i->second;
     if ((ion->GetAtomicNumber() != Z) || (ion->GetAtomicMass() != A)) break;
     // Excitation level
@@ -1506,7 +1515,8 @@ G4ParticleDefinition* G4IonTable::FindIonInMaster(G4int Z, G4int A, G4int LL, G4
 
   // -- loop over all particles in Ion table
   G4int encoding = GetNucleusEncoding(Z, A, LL);
-  for (auto i = fIonListShadow->find(encoding); i != fIonListShadow->cend(); ++i) {
+  for (auto i = fIonListShadow->lower_bound(encoding);
+       i != fIonListShadow->cend() && i->first == encoding; ++i) {
     ion = i->second;
     if ((ion->GetAtomicNumber() != Z) || (ion->GetAtomicMass() != A)) break;
     if (ion->GetQuarkContent(3) != LL) break;
