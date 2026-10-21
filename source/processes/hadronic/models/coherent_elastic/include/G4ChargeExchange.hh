@@ -78,6 +78,7 @@ public:
   G4double GetLasttheta() const {return theta_init_output;}
 
   void SetScalingFactor(G4double val){scalingFactor = val*CLHEP::GeV;}
+  void SetAPScale(G4double val){fAPScale = val;} // multiplies the analyzing power, result is clamped to -1.0 at the low end
 
 private:
 
@@ -100,6 +101,7 @@ private:
   G4double momentumCMS_output = -1.0;
 
   G4double scalingFactor{1};
+  G4double fAPScale{1.0};
   G4double lowEnergyLimitNP = 1*CLHEP::GeV;
 };
 

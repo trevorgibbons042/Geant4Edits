@@ -301,7 +301,7 @@ if (verboseLevel > 1) {
   G4double pbeam = pin.mag();
   G4ThreeVector polarization = aTrack.GetPolarization();
   
-  G4double AnalyzingPower = -(AP_A)*(1-std::exp(-(AP_k)*pbeam))*std::sqrt(t);
+  G4double AnalyzingPower = std::max(-1.0, fAPScale*(-(AP_A)*(1-std::exp(-(AP_k)*pbeam))*std::sqrt(t)));
 
   G4double phi_new;
   while (true)
